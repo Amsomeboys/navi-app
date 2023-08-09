@@ -1,27 +1,10 @@
-import { View, Text, StyleSheet, Button } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { FontAwesome5 } from '@expo/vector-icons';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import HomeScreen from './src/screen/homeScreen';
+import NextScreen from './src/screen/nextScreen';
 
-const HomeScreen = ({ navigation }) => {
-  return (
-    <View style={styles.container}>
-      <Text>Home Screen</Text>
-      <Button
-        title="Next >>"
-        onPress={() => navigation.navigate('Next')}
-      ></Button>
-    </View>
-  );
-};
-const NextScreen = () => {
-  return (
-    <View style={styles.container}>
-      <Text>Next Screen</Text>
-    </View>
-  );
-};
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 
@@ -29,7 +12,7 @@ const HomeStackScreen = () => {
   return (
     <Stack.Navigator>
       <Stack.Screen name="Home" component={HomeScreen} />
-      <Stack.Screen name="Next" component={NextScreen} />
+      {/* <Stack.Screen name="Next" component={NextScreen} /> */}
     </Stack.Navigator>
   );
 };
@@ -47,7 +30,7 @@ const App = () => {
         }}
       >
         <Tab.Screen
-          name="Home"
+          name="HomeStack"
           component={HomeStackScreen}
           options={{
             tabBarIcon: ({ color, size }) => (
@@ -77,20 +60,5 @@ const App = () => {
     </NavigationContainer>
   );
 };
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#B7BF99',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  title: { fontSize: 16, fontWeight: 'bold' },
-  input: {
-    height: 40,
-    margin: 12,
-    width: 400,
-    borderWidth: 1,
-    padding: 10,
-  },
-});
+
 export default App;
