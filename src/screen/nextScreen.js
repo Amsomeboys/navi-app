@@ -30,7 +30,7 @@ const NextScreen = () => {
         <MyButton
           title="Submit"
           onPress={() => {
-            Alert.alert("Submmit", `You entered "${message}"`);
+            Alert.alert("Submit", `You entered "${message}"`);
           }}
         />
         <MyButton
@@ -48,7 +48,7 @@ const NextScreen = () => {
           title="Drop"
           color="#c1272d"
           onPress={() => {
-            Alert.alert("I will drop", `${subject}`, "ha ha ha");
+            Alert.alert("I will drop", `${subject} ha ha ha`);
           }}
         />
       </View>
