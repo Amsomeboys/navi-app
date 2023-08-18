@@ -1,9 +1,9 @@
-import { NavigationContainer } from '@react-navigation/native';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { FontAwesome5 } from '@expo/vector-icons';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import HomeScreen from './src/screen/homeScreen';
-import NextScreen from './src/screen/nextScreen';
+import { NavigationContainer } from "@react-navigation/native";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { FontAwesome5 } from "@expo/vector-icons";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import HomeScreen from "./src/screen/homeScreen";
+import NextScreen from "./src/screen/nextScreen";
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -22,10 +22,10 @@ const App = () => {
     <NavigationContainer>
       <Tab.Navigator
         screenOptions={{
-          tabBarStyle: { backgroundColor: '#edaa25' },
-          tabBarActiveTintColor: '#C43302',
-          headerStyle: { backgroundColor: '#0A7373' },
-          headerTintColor: '#fff',
+          tabBarStyle: { backgroundColor: "#edaa25" },
+          tabBarActiveTintColor: "#C43302",
+          headerStyle: { backgroundColor: "#0A7373" },
+          headerTintColor: "#fff",
           headerShown: false,
         }}
       >
